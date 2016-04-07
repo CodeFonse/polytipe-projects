@@ -8,7 +8,7 @@
   <meta name="description" content="">
 
   <!-- No zooming! -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
   <!-- Chrome / Android -->
   <meta id="bar" name="theme-color" content="">
@@ -38,17 +38,18 @@
 </head>
 
 <body unresolved class="fullbleed">
-  <paper-drawer-panel id="drawer_panel" disable-swipe force-narrow>
-    <paper-header-panel drawer mode="seamed">
-      <div id="drawer_content"></div>
-    </paper-header-panel>
-    <paper-header-panel main mode="seamed">
-      <iron-selector id="app_content" attr-for-selected="id" selected="{{selected_screen}}">
+  <template id="app" is="dom-bind">
+    <paper-drawer-panel id="drawer_panel" disable-swipe force-narrow>
+      <paper-header-panel drawer mode="seamed">
+        <div id="drawer_content"></div>
+      </paper-header-panel>
+      <paper-header-panel main mode="seamed">
+        <iron-selector id="app_content" attr-for-selected="id" selected="{{selected_screen}}">
 
-      </iron-selector>
-    </paper-header-panel>
-  </paper-drawer-panel>
-
+        </iron-selector>
+      </paper-header-panel>
+    </paper-drawer-panel>
+  </template>
 </body>
 
 </html>
