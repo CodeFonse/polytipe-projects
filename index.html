@@ -30,7 +30,16 @@
   <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
 
   <!-- Web Components and magic stuff -->
-  <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="is.min.js"></script>
+  <script>
+    var magic = document.createElement('script');
+    if (is.chrome()) {
+      magic.setAttribute("src", "bower_components/webcomponentsjs/webcomponents.js");
+    }else{
+      magic.setAttribute("src", "bower_components/webcomponentsjs/webcomponents-lite.js");
+    }
+    document.getElementsByTagName("head")[0].appendChild(magic);
+  </script>
   <link rel="import" href="elements.html">
   <link rel="import" href="styles.html">
   <style is="custom-style" include="styles"></style>
