@@ -28,7 +28,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="My App">
   <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
-  
+
   <!-- Web Components -->
   <script src="bower_components/webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="elements.html">
@@ -46,6 +46,15 @@
       <iron-pages id="app_content" attr-for-selected="id"></iron-pages>
     </paper-header-panel>
   </paper-drawer-panel>
+
+  <script type="text/javascript">
+    window.addEventListener('WebComponentsReady', function(e) {
+      console.log("WebComponentsReady");
+    });
+    window.addEventListener('load', function(e) {
+      console.log("load");
+    });
+  </script>
 </body>
 
 </html>
