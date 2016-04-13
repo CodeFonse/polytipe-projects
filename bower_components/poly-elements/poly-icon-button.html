@@ -1,5 +1,4 @@
 <link rel="import" href="../polymer/polymer.html">
-
 <link rel="import" href="../paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../iron-icons/iron-icons.html">
 <link rel="import" href="../iron-icon/iron-icon.html">
@@ -24,15 +23,18 @@
       properties:{
         icon:{
           type: String,
-          value: "favorite"
+          value: "favorite",
+          reflectToAttribute: true
         },
         src:{
           type: String,
-          value: ""
+          value: "",
+          reflectToAttribute: true
         },
         disabled:{
           type: Boolean,
-          value: false
+          value: false,
+          reflectToAttribute: true
         }
       },
       ready: function () {
