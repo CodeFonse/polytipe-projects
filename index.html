@@ -48,7 +48,9 @@
   </paper-drawer-panel>
 
   <script type="text/javascript">
+  console.log("whatever");
     window.addEventListener('WebComponentsReady', function(e) {
+      console.log("sure, i'm here");
       var url = (window.location != window.parent.location) ? document.referrer: document.location;
       window.parent.parent.postMessage("iframe_ready",url);
     });
